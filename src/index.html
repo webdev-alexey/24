@@ -42,16 +42,22 @@
 
       <section class="about">
         <div class="about__bg">
-          <picture class="picture object-fit-cover">
-            <source
-              srcset="img/main-bg.webp, img/main-bg@2x.webp 2x"
-              type="image/webp" />
+          <div class="about__inner">
+            <picture class="picture object-fit-cover">
+              <source
+                srcset="img/main-bg.webp, img/main-bg@2x.webp 2x"
+                type="image/webp" />
+              <img
+                class="about__photo"
+                src="img/main-bg.png"
+                srcset="img/main-bg.png, img/main-bg@2x.png 2x"
+                alt="Алина Антипова" />
+            </picture>
             <img
-              class="about__bg_photo"
-              src="img/main-bg.png"
-              srcset="img/main-bg.png, img/main-bg@2x.png 2x"
+              class="about__decor"
+              src="icons/bg-decor.svg"
               alt="Алина Антипова" />
-          </picture>
+          </div>
         </div>
         <div class="about__wrap">
           <h2 class="about__title section-title">
@@ -356,8 +362,6 @@
       </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
