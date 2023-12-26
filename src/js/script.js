@@ -50,4 +50,43 @@ function animate() {
       },
       "<",
     );
+
+  // Секция 2
+  const tlAim = gsap.timeline({
+    ease: "power1.out",
+    scrollTrigger: {
+      trigger: ".aim",
+      start: "top top",
+      end: "bottom+=120%",
+      pin: true,
+      scrub: 1,
+    },
+  });
+
+  tlAim
+    .to(
+      ".aim__first",
+      {
+        xPercent: -100,
+      },
+      "0.5",
+    )
+    .to(
+      ".aim__second",
+      {
+        xPercent: -100,
+      },
+      "<",
+    )
+    .from(".aim__text", {
+      autoAlpha: 0,
+      yPercent: 100,
+    })
+    .from(".experience__item", {
+      autoAlpha: 0,
+      stagger: 0.2,
+    })
+    .to(".experience__border", {
+      width: "100%",
+    });
 }

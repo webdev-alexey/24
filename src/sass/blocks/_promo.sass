@@ -129,6 +129,7 @@
     background: grey
 
 .aim
+    min-height: 100vh
     padding-bottom: 150px
     padding-top: 150px
     @include md
@@ -138,20 +139,24 @@
         margin-bottom: 60px
         width: 100%
         display: flex
-        flex-direction: column
+        overflow: hidden
         @include sm
             margin-bottom: 60px
             flex-direction: column
         @include xxs
             max-width: 280px
     &__first
+        flex: 0 0 100%
         display: flex
         justify-content: center
+        white-space: nowrap
         @include sm
             flex-direction: column
     &__second
+        flex: 0 0 100%
         display: flex
         justify-content: center
+        white-space: nowrap
         span
             margin-left: 15px
         @include sm
@@ -164,6 +169,7 @@
         margin-bottom: 100px
         text-align: center
         line-height: 135%
+        visibility: hidden
 
 .experience
     padding-top: 20px
@@ -180,11 +186,13 @@
         grid-template-columns: repeat(2, 1fr)
     @include xxs
         grid-template-columns: 1fr
+    &__item
+        visibility: hidden
     &__border
         position: absolute
         top: 0px
         left: 0
-        width: 100%
+        width: 0
         height: 1px
         background: $accent-color
         opacity: 0.5
