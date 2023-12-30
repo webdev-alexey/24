@@ -89,4 +89,26 @@ function animate() {
     .to(".experience__border", {
       width: "100%",
     });
+
+  // Секция 3
+  const tlEducation = gsap.timeline({
+    repeat: -1,
+  });
+
+  tlEducation
+    .from(".education__item", {
+      duration: 1,
+      yPercent: 100,
+      autoAlpha: 0,
+      stagger: 2,
+    })
+    .to(
+      ".education__item",
+      {
+        duration: 1,
+        yPercent: -100,
+        stagger: 2,
+      },
+      2,
+    );
 }

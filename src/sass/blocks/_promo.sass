@@ -219,14 +219,20 @@
         position: relative
         max-width: 550px
         margin: 0 auto
+        min-height: 80px
         overflow: hidden
     &__item
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
         width: 100%
         min-height: 75px
         display: flex
         align-items: center
         justify-content: center
         text-align: center
+        visibility: hidden
 
 .results
     padding: 150px 0
