@@ -192,4 +192,16 @@ function animate() {
     pin: true,
     scrub: 1,
   });
+
+  // Секция 5
+  gsap.to(".reviews", {
+    yPercent: -110,
+    scrollTrigger: {
+      trigger: ".double-section2",
+      start: "top top",
+      end: "bottom+=70%",
+      scrub: 1,
+      pin: true,
+    },
+  });
 }
