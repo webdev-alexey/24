@@ -5,6 +5,44 @@ window.addEventListener("DOMContentLoaded", () => {
 function animate() {
   gsap.registerPlugin(ScrollTrigger);
 
+  // Прелоадер
+  const preloaderPath = document.querySelector("path");
+  const svgPreload = document.querySelector("svg");
+  const pathLength = preloaderPath.getTotalLength();
+
+  gsap.set(svgPreload, {
+    opacity: 0,
+    strokeDasharray: pathLength,
+    strokeDashoffset: pathLength,
+  });
+
+  const tlPreloader = gsap.timeline({});
+
+  tlPreloader
+    .to(".preloader__title", {
+      opacity: 1,
+    })
+    .to(svgPreload, {
+      opacity: 1,
+    })
+    .to(svgPreload, {
+      strokeDashoffset: 0,
+      duration: 2,
+      ease: "power1.in",
+    })
+    .to(
+      ".preloader",
+      {
+        duration: 0.6,
+        xPercent: 100,
+        ease: "power3.in",
+      },
+      "+=0.5",
+    )
+    .to(".preloader", {
+      display: "none",
+    });
+
   // Секция 1
   gsap.set(".about__bg", {
     yPercent: 20,
