@@ -1,0 +1,85 @@
+.training
+    position: absolute
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100vw
+    padding: 50px 0 100px 0
+    background: $main-color
+    z-index: 1
+    @include sm
+        position: relative
+        height: auto
+    @include xxs
+        padding-bottom: 40px
+    .container
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+    &__title
+        height: 100px
+        text-align: center
+        color: $light-color!important
+        @include sm
+            margin-top: 60px
+            position: relative
+            height: auto
+
+.training-item
+    padding: 20px 0
+    position: relative
+    cursor: pointer
+    &:after
+        content: ''
+        position: absolute
+        top: 0px
+        left: 0
+        width: 100%
+        height: 1px
+        background: #F2F2F2
+        opacity: 0.5
+    &:last-child
+        &:before
+            content: ''
+            position: absolute
+            bottom: 0px
+            left: 0
+            width: 100%
+            height: 1px
+            background: #F2F2F2
+            opacity: 0.5
+    &:hover
+        .training-item__descr
+            opacity: 1
+            z-index: 2
+            transition: opacity 0.3s ease-in-out
+
+        .training-item__title
+            opacity: 0
+
+    &__title
+        position: relative
+        font-family: $gilroy
+        font-size: 18px
+        color: #949393
+        height: 72px
+        display: flex
+        align-items: center
+        transition: opacity 0.3s ease
+    &__descr
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        height: 72px
+        display: flex
+        align-items: center
+        color: $light-color
+        opacity: 0
+        z-index: -1
+        text-overflow: ellipsis
+        @include sm
+            font-size: 16px
+        @include xs
+            font-size: 14px

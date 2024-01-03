@@ -1,0 +1,34 @@
+.experience
+    padding-top: 20px
+    position: relative
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 104px
+    @include md
+        gap: 50px
+    @include sm
+        gap: 30px
+    @include xs
+        grid-template-columns: repeat(2, 1fr)
+    @include xxs
+        grid-template-columns: 1fr
+    &__item
+        visibility: hidden
+    &__border
+        position: absolute
+        top: 0px
+        left: 0
+        width: 0
+        height: 1px
+        background: $accent-color
+        opacity: 0.5
+    &__num
+        margin-bottom: 10px
+        font-size: 50px
+        font-family: $co-light
+        font-variant-numeric: lining-nums tabular-nums
+        @include sm
+            font-size: 40px
+        @include xxs
+            font-size: 30px

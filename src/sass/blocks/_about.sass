@@ -1,0 +1,105 @@
+.about
+    position: relative
+    height: 130vh
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    @include sm
+        min-height: 100vh
+        height: auto
+        padding-top: 500px
+        padding-bottom: 150px
+        overflow: hidden
+    @include xs
+        padding-top: 320px
+    @include xxs
+        padding: 202px 0 45px 0
+    &__bg
+        position: absolute
+        width: 100vw
+        height: 130vh
+        left: 50%
+        top: 0
+        transform: translate(-50%)
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        overflow: hidden
+        @include sm
+            left: 0
+            width: 100%
+            height: 100%
+            transform: translate(0, 0)
+            align-items: stretch
+    &__inner
+        position: relative
+        height: 470px
+        width: 380px
+        @include sm
+            height: 100%
+            width: 100%
+    &__photo
+        width: 100%
+        height: 100%
+        @include sm
+            width: 100%
+            height: 100%
+    &__decor
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        @include sm
+            display: none
+    &__wrap
+        position: relative
+        max-width: 1240px
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include sm
+            max-width: 450px
+        @include xxs
+            padding: 0 16px
+            max-width: 100%
+    &__title
+        margin: 0 auto
+        margin-bottom: 20px
+        width: 600px
+        display: flex
+        flex-direction: column
+        color: $light-color!important
+        span
+            align-self: flex-end
+        @include sm
+            width: 100%
+        @include xxs
+            width: 250px
+    &__list
+        margin-bottom: 50px
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__item
+        color: $light-color
+        &:not(:last-child)
+            margin-bottom: 10px
+        @include xxs
+            text-align: center
+    &__link
+        position: relative
+        text-transform: uppercase
+        font-family: $co-light
+        color: $light-color
+        &:after
+            content: ''
+            position: absolute
+            bottom: -2px
+            left: 0
+            width: 100%
+            height: 1px
+            background: $accent-color
+        @include xxs
+            font-size: 16px

@@ -1,0 +1,40 @@
+.reviews
+    min-height: 100vh
+    width: 100vw
+    position: relative
+    padding-top: 150px
+    background: $light-color
+    z-index: 3
+    @include md
+        padding-top: 100px
+    @include sm
+        min-height: auto
+        padding-bottom: 100px
+    &__row
+        width: 100%
+        overflow: hidden
+        @include sm
+            width: none
+            overflow: none
+    &__wrap
+        padding-top: 20px
+        border-top: 1px solid rgba(145, 4, 72, 0.5)
+        display: flex
+        @include sm
+            padding-top: 0
+            border-top: none
+    &__chapter
+        margin-right: 3.4%
+        flex: 0 0 30%
+        color: $main-color
+        @include sm
+            font-size: 16px
+        @include xxs
+            flex: 0 0 55%
+            margin-right: 5%
+    &__name
+        margin-top: 15px
+        color: rgba(17, 12, 13, 0.50)
+    &__title
+        margin-bottom: 100px
+        text-align: center

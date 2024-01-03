@@ -41,6 +41,7 @@ const scripts = function () {
     .src([
       "node_modules/gsap/dist/gsap.min.js",
       "node_modules/gsap/dist/ScrollTrigger.min.js",
+      "node_modules/swiper/swiper-bundle.min.js",
       "src/js/**/*.js",
     ])
     .pipe(concat("main.min.js"))

@@ -1,0 +1,42 @@
+.aim
+    min-height: 100vh
+    padding-bottom: 150px
+    padding-top: 150px
+    @include md
+        padding-bottom: 80px
+        padding-top: 80px
+    &__title
+        margin-bottom: 60px
+        width: 100%
+        display: flex
+        overflow: hidden
+        @include sm
+            margin-bottom: 60px
+            flex-direction: column
+        @include xxs
+            max-width: 280px
+    &__first
+        flex: 0 0 100%
+        display: flex
+        justify-content: center
+        white-space: nowrap
+        @include sm
+            flex-direction: column
+    &__second
+        flex: 0 0 100%
+        display: flex
+        justify-content: center
+        white-space: nowrap
+        span
+            margin-left: 15px
+        @include sm
+            flex-direction: column
+            span
+                margin-left: 0
+    &__text
+        max-width: 585px
+        margin: 0 auto
+        margin-bottom: 100px
+        text-align: center
+        line-height: 135%
+        visibility: hidden
